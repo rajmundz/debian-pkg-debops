@@ -1,0 +1,41 @@
+Source: debops
+Section: admin
+Priority: optional
+Maintainer: Daniel Stender <stender@debian.org>
+Build-Depends:
+ debhelper (>= 9),
+ dh-python,
+ python,
+ python-setuptools,
+ python-netaddr,
+ pandoc
+Standards-Version: 3.9.7
+Homepage: http://debops.org/
+
+Package: debops
+Architecture: all
+Depends:
+ ansible,
+ ${misc:Depends},
+ ${python:Depends},
+ python-pkg-resources,
+ debops-playbooks
+Recommends:
+ python-ldap,
+ python-passlib,
+ uuid-runtime,
+ encfs,
+ gnupg
+Description: Ansible based configuration framework for Debian servers
+ DebOps is a administration framework for setting up remote Debian servers
+ which is based on the configuration management system Ansible. For that
+ purpose the project features a large collection of several refined Ansible
+ scripts (playbooks and roles). With them a multitude of different services
+ could be set up on one or a number of remote servers in the same run most
+ conveniently. The scripts are written in a modular fashion and could be
+ combined differently, as needed.
+ .
+ This package contains a collection of helper scripts for the use of the
+ project's Ansible playbooks and rules which are contained in the package
+ debops-playbooks. They provide additional functions like the creation
+ of project directories and the encryption of the secrets folder.

@@ -1,0 +1,3 @@
+version=3
+opts="filenamemangle=s/(?:.*)?v?(\d[\d\.]+)\.tar\.gz/debops-$1.tar.gz/" \
+https://github.com/debops/debops/releases (?:.*/)?v?(\d[\d\.]+)\.tar\.gz

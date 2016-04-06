@@ -1,0 +1,6 @@
+/usr/share/debops/debops-main /usr/bin/debops
+/usr/share/debops/debops-defaults /usr/bin/debops-defaults
+/usr/share/debops/debops-init /usr/bin/debops-init
+/usr/share/debops/debops-padlock /usr/bin/debops-padlock
+/usr/share/debops/debops-task /usr/bin/debops-task
+/usr/share/debops/debops-update /usr/bin/debops-update

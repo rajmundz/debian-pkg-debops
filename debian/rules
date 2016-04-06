@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+#export DH_VERBOSE=1
+#export DEB_BUILD_OPTIONS=nocheck
+export PYBUILD_NAME=debops
+
+%:
+	dh $@ --with python2 --buildsystem=pybuild
+
+override_dh_auto_install:
+	PYBUILD_SYSTEM=custom PYBUILD_INSTALL_ARGS="{interpreter} setup.py install --root=debian/debops --install-layout=deb --install-lib=/usr/share/debops --install-scripts=/usr/share/debops" dh_auto_install
+	mv -v debian/debops/usr/share/debops/debops/debops debian/debops/usr/share/debops/debops-main
+
+override_dh_installchangelogs:
+	pandoc -f rst -t plain -o .pybuild/CHANGES CHANGES.rst
+	dh_installchangelogs .pybuild/CHANGES
