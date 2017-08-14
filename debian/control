@@ -10,6 +10,8 @@ Build-Depends:
  python-netaddr,
  pandoc
 Standards-Version: 3.9.7
+Vcs-Browser: https://github.com/rajmundz/debian-pkg-debops.git
+Vcs-Git: https://github.com/rajmundz/debian-pkg-debops.git
 Homepage: http://debops.org/
 
 Package: debops
