@@ -1,7 +1,7 @@
 Source: debops
 Section: admin
 Priority: optional
-Maintainer: Daniel Stender <stender@debian.org>
+Maintainer: Rajmund Zawislak <rajmund.zawislak@gmail.com>
 Build-Depends:
  debhelper (>= 9),
  dh-python,
